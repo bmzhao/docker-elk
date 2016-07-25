@@ -74,3 +74,19 @@ bundled_plugin_ids:
  - plugins/table_vis/index
  - plugins/vis_types/index
  - plugins/visualize/index
+
+
+sense.defaultServerUrl: https://sumyoutube.com:9400
+sense.proxyConfig:
+  - match:
+      host: "*" # allow any host that ends in .internal.org
+      port: "{9200..9299}" # allow any port from 9200-9299
+
+  - match:
+      protocol: "https"
+
+    ssl:
+      verify: false # allows any certificate to be used, even self-signed certs
+
+  # since this rule has no "match" section it matches everything
+  - timeout: 180000 # 3 minutes
