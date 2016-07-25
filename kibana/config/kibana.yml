@@ -75,7 +75,7 @@ bundled_plugin_ids:
  - plugins/vis_types/index
  - plugins/visualize/index
 
-
+#https://www.elastic.co/guide/en/sense/current/installing.html
 sense.defaultServerUrl: https://sumyoutube.com:9400
 sense.proxyConfig:
   - match:
